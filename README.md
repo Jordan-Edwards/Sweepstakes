@@ -1,2 +1,2 @@
 # Sweepstakes
-A Python Project meant to explore &amp; learn Design Patterns
+A Python Project Meant to Explore &amp; Learn Design Patterns
