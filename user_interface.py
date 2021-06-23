@@ -38,7 +38,7 @@ class UserInterface:
             print(f"{i}: {sweepstake.name}")
 
     @staticmethod
-    def display_sweepstakes_menu_options():
+    def display_sweepstakes_menu_choices():
         print("Enter -1- to register In a Sweepstakes.")
         print("Enter -2- to choose a winner. ")
         print("Enter -3- to view contestant information. ")
@@ -48,12 +48,12 @@ class UserInterface:
         elif user_selection == 2:
             Sweepstakes.choose_winner()
         elif user_selection == 3:
-            Sweepstakes.view_contestant()
+            Sweepstakes.show_contestant()
         else:
             pass
 
     @staticmethod
-    def display_marketing_firm_menu_options():
+    def display_marketing_firm_menu_choices():
         print("Enter -1- to make a sweepstakes.")
         print("Enter -2- to select a sweepstakes. ")
         print("Enter -3- to change the marketing firm name. ")
@@ -74,8 +74,8 @@ class UserInterface:
         print("Enter -2- to see the marketing firm menu ")
         user_selection = UserInterface.get_user_int("Enter the number of your choice")
         if user_selection == 1:
-            UserInterface.display_marketing_firm_menu_options()
+            UserInterface.display_marketing_firm_menu_choices()
         elif user_selection == 2:
-            UserInterface.display_sweepstakes_menu_options()
+            UserInterface.display_sweepstakes_menu_choices()
         else:
             pass
