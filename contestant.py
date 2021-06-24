@@ -1,18 +1,16 @@
+from user_interface import UserInterface
+
 
 class Contestant:
-    def __init__(self, fname, lname, email, registration_number):
-        self.key = {
-            "first_name": fname,
-            "last_name": lname,
-            "email": email,
-            "reg_num": registration_number,
-            "winner_status": False
-        }
+    def __init__(self):
+        self.first_name = UserInterface.get_user_string("Enter your first name")
+        self.last_name = UserInterface.get_user_string("Enter your last name")
+        self.email = UserInterface.get_user_string("Enter your preferred email address")
+        self.registration_number = 0
 
-    def notify_winner_status(self, winner_posted):
-        if winner_posted['winner_status']:
-            print(f"{winner_posted.key['fname']} {winner_posted['lname']}!"
-                  f"WINNER WINNER CHICKEN DINNER! YOU HAVE WON!")
+    def notify_winner_status(self, is_winner):
+        is_winner = False
+        if is_winner == False:
+            pass
         else:
-            print(f"{winner_posted.key['fname']} {winner_posted['lname']}"
-                  f"So....there's no easy way to say this. You didn't win. But hey, there's always next time.")
+            pass
