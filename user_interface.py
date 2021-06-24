@@ -1,20 +1,13 @@
-from marketing_firm import MarketingFirm
-from sweepstakes import Sweepstakes
-
-
 class UserInterface:
+
     @staticmethod
     def display_message(message):
         print(message)
 
     @staticmethod
     def get_user_int(prompt):
-        try:
-            user_input = int(input(prompt))
-            return user_input
-        except ValueError:
-            print("Enter a Number")
-            return UserInterface.get_user_int(prompt)
+        user_input = int(input(prompt))
+        return user_input
 
     @staticmethod
     def get_user_string(prompt):
@@ -27,8 +20,14 @@ class UserInterface:
 
     @staticmethod
     def display_contestant_info(contestant):
-        print(
-            f"Contestant Number: #{contestant.registration_number}: Full Name: {contestant.first_name} {contestant.last_name} Email: {contestant.email}")
+        fname = contestant.key['first_name']
+        lname = contestant.key['last_name']
+        email = contestant.key['email']
+        registration_number = contestant.key['reg_num']
+        print(f"First Name: {fname}"
+              f"Last Name: {lname}"
+              f"Email: {email}"
+              f"Registration Number: {registration_number}")
 
     @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):

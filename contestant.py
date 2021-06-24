@@ -1,19 +1,18 @@
-import sweepstakes
-from user_interface import UserInterface
-from sweepstakes import Sweepstakes
+import user_interface
 
 
 class Contestant:
+    def __init__(self, fname, lname, email, registration_number):
+        self.key = {
+            "first_name": fname,
+            "last_name": lname,
+            "email": email,
+            "reg_num": registration_number,
+        }
 
-    def __init__(self):
-        self.first_name = UserInterface.get_user_string("Enter your Legal First Name")
-        self.last_name = UserInterface.get_user_string("Enter your Legal Last Name")
-        self.email = UserInterface.get_user_string("Enter the Email Address You Would like us to use as Your Contact Method")
-        self.registration_number = 0
-
-    def notification(self, is_winner):
-        is_winner = False
-        if is_winner:
-            print("You are Not Today's Luck Winner. Maybe Next Time!")
+    def notify_winner_status(self, notify_winner_status):
+        notify_winner_status = False
+        if notify_winner_status:
+            pass
         else:
-            print("Congratulations! You are Today's Lucky Winner!")
+            pass
