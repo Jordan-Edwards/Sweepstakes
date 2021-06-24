@@ -28,7 +28,7 @@ class UserInterface:
 
     @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):
-        pass
+        print("list of on going Sweepstakes")
 
     @staticmethod
     def display_sweepstakes_menu_choices():

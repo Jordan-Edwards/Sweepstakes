@@ -6,18 +6,18 @@ class MarketingFirm:
 
     def __init__(self):
         self.name = "name"
-        self.sweepstakes_dictionary = ["Morgan & Morgan & Morgan ", "Real Fake Firms International"]
+        sweepstakes_dictionary = []
 
     def create_sweepstakes(self):
-        new_sweepstakes = UserInterface.get_user_string("Enter name of the new sweepstakes")
-        self.sweepstakes_dictionary.append(new_sweepstakes)
+        MarketingFirm.name = UserInterface.get_user_string("What is the Name of the new Sweepstake?")
+        MarketingFirm.sweepstakes_dictionary.append(self.name)
+        MarketingFirm.menu(self)
 
     def select_sweepstakes(self):
-        (self=None):
-        userInterface.display_sweepstakes_selection_menu()
-        all_sweepstakes = userInterface.get_user_input_number("Select a sweepstake number")
-        sweepStakes.Sweepstakes.sweepstakes_menu(self)
-        pass
+        UserInterface.display_sweepstakes_selection_menu(self)
+        all_sweepstakes = UserInterface.get_user_int("Select a sweepstake number")
+        U.sweepstakes_menu(all_sweepstakes)
+        return all_sweepstakes
 
     def change_marketing_firm_name(self):
         self.name = UserInterface.get_user_string("Enter the name of your firm")

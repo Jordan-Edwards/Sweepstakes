@@ -7,6 +7,7 @@ class Contestant:
         self.last_name = UserInterface.get_user_string("Enter your last name")
         self.email = UserInterface.get_user_string("Enter your preferred email address")
         self.registration_number = 0
+        pass
 
     def notify_winner_status(self, is_winner):
         is_winner = False
