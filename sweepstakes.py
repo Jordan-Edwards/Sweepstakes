@@ -1,24 +1,24 @@
 import user_interface
 from contestant import Contestant
+from marketing_firm import MarketingFirm
 import random
 
 class Sweepstakes:
 
-    def __init__(self):
-        self.name = ""
-        self.contestants = {}
+    def __init__(self, person_name, every_contestant ):
+        self.name = person_name
+        self.contestants = every_contestant
 
         def register_contestant(contestant):
-            contestant.registration_number = len(self.contestants)
-            self.contestants.update({len(self.contestants): contestant})
+            self.contestants.append(contestant)
 
         def choose_winner():
-            return random.choice(list(self.contestants))
-            pass
+            chicken_dinner = random.randint(self.contestants)
+            Contestant.notify_winner_status()
+            return notify_winner_status
 
         def show_contestant():
-            user_interface.display_message(self.contestants.items())
-            pass
+            return user_interface.UserInterface.display_contestant_info()
 
     def menu(self):
         user_interface.UserInterface.display_sweepstakes_menu_choices()
